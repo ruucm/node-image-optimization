@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "webp": "node webp.js",
+    "sharp": "node sharp.js"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "imagemin": "^8.0.0",
+    "imagemin-webp": "^6.0.0",
+    "path": "^0.12.7",
+    "sharp": "^0.28.3"
+  },
+  "type": "module"
+}
