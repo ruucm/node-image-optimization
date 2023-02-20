@@ -21,3 +21,8 @@ yarn webp
 ```
 yarn sharp
 ```
+
+
+## Todos
+
+- Handle case no `resize` directory
