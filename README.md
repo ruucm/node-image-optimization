@@ -25,4 +25,5 @@ yarn sharp
 
 ## Todos
 
-- Handle case no `resize` directory (or ask saving path)
+- Handle case no `resize` directory
+- ~~Ask saving path~~

@@ -5,10 +5,14 @@ import readline from 'readline-sync'
 
 // source from https://stackoverflow.com/questions/10049557/reading-all-files-in-a-directory-store-them-in-objects-and-send-the-object
 
-const dirname = "./images"
+const base =  readline.question("Directory path of images ")?.replaceAll("'", "") || "./images"
+
+// get relative path of the absolute path (dirname) from this directory)
+const dirname = base === "./images" ? "./images" : path.relative('/Users/ruucm/Desktop/_personals/node-image-optimization', base)
+
 
 fs.readdir(dirname, function (err, filenames) {
-  if (err) {
+if (err) {
     // onError(err);
     return
   }
