@@ -1,6 +1,7 @@
 import sharp from "sharp"
 import fs from "fs"
 import path from "path"
+import readline from 'readline-sync'
 
 // source from https://stackoverflow.com/questions/10049557/reading-all-files-in-a-directory-store-them-in-objects-and-send-the-object
 
@@ -25,7 +26,7 @@ fs.readdir(dirname, function (err, filenames) {
   })
 })
 
-const imageSize = 1080
+const imageSize = Number(readline.question("New image width (for resize) ")) || 1080
 function resizeImage(filepath, name) {
   sharp(filepath)
     .resize(imageSize)

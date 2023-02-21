@@ -5,6 +5,7 @@ specifiers:
   imagemin: ^8.0.0
   imagemin-webp: ^6.0.0
   path: ^0.12.7
+  readline-sync: ^1.4.10
   sharp: ^0.28.3
 
 dependencies:
@@ -12,6 +13,7 @@ dependencies:
   imagemin: 8.0.1
   imagemin-webp: 6.1.0
   path: 0.12.7
+  readline-sync: 1.4.10
   sharp: 0.28.3
 
 packages:
@@ -1318,6 +1320,11 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       readable-stream: 3.6.0
+    dev: false
+
+  /readline-sync/1.4.10:
+    resolution: {integrity: sha512-gNva8/6UAe8QYepIQH/jQ2qn91Qj0B9sYjMBBs3QOB8F2CXcKgLxQaJRP76sWVRQt+QU+8fAkCbCvjjMFu7Ycw==}
+    engines: {node: '>= 0.8.0'}
     dev: false
 
   /replace-ext/2.0.0:
