@@ -32,16 +32,22 @@ if (err) {
 
 const imageSize = Number(readline.question("New image width (for resize) ")) || 1080
 function resizeImage(filepath, name) {
+
+  const outDir = `${dirname}/resized`
+
+  // check if the directory exists & create the directory if it doesn't exist
+  if (!fs.existsSync(outDir)) fs.mkdirSync(outDir);
+
   sharp(filepath)
     .resize(imageSize)
-    .toFile(`${dirname}/resized/${name}.webp`, (err, info) => {
+    .toFile(`${outDir}/${name}.webp`, (err, info) => {
       console.log("err", err)
       console.log("info", info)
     })
 
   sharp(filepath)
     .resize(imageSize)
-    .toFile(`${dirname}/resized/${name}.png`, (err, info) => {
+    .toFile(`${outDir}/${name}.png`, (err, info) => {
       console.log("err", err)
       console.log("info", info)
     })
